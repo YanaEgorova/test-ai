@@ -4,20 +4,22 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 /**
- * Шкала типографики проекта.
+ * Шкала типографики проекта (Norion-Soft).
  *
- * Респонсивные уровни (отличаются на мобильном и десктопе):
- *   - display — Hero-заголовок главной (48 → 72)
- *   - h1      — заголовок страницы (36 → 48)
- *   - h2      — заголовок секции (24 → 30)
+ * Размеры берутся из дизайн-системы:
+ *   display          48 → 72  (Hero-заголовок главной)
+ *   h1               36 → 48  (заголовок страницы)
+ *   h2               24 → 32  (заголовок секции, custom token h2-max)
+ *   h3               18 → 22  (заголовок карточки, custom token h3-max)
+ *   h4               18       (подзаголовок внутри карточки)
+ *   lead             18       (лид-абзац, серый)
+ *   body             16       (обычный текст)
+ *   small            13 → 14  (подписи, custom token small-min)
+ *   caption          12       (мелкая служебная подпись)
+ *   overline         11       (заглавная мелкая надпись с разрядкой)
  *
- * Одинаковые на всех экранах:
- *   - h3      — заголовок карточки (20)
- *   - h4      — подзаголовок внутри карточки (18)
- *   - lead    — лид-абзац, подзаголовок (18, серый)
- *   - body    — обычный текст (16)
- *   - small   — подписи, метаданные (14)
- *   - caption — мелкие подписи (12, серый)
+ * Респонсив (через md: breakpoint) применяется только к display/h1/h2/h3/small.
+ * Остальное одинаково на всех экранах.
  */
 const typographyVariants = cva("", {
   variants: {
@@ -25,13 +27,15 @@ const typographyVariants = cva("", {
       display:
         "text-balance text-5xl font-bold leading-tight tracking-tight md:text-7xl",
       h1: "text-balance text-4xl font-bold leading-tight tracking-tight md:text-5xl",
-      h2: "text-balance text-2xl font-semibold leading-tight tracking-tight md:text-3xl",
-      h3: "text-xl font-semibold leading-snug",
+      h2: "text-balance text-2xl font-semibold leading-tight tracking-tight md:text-h2-max",
+      h3: "text-lg font-semibold leading-snug md:text-h3-max",
       h4: "text-lg font-semibold leading-snug",
       lead: "text-muted-foreground text-lg leading-relaxed",
       body: "text-base leading-relaxed",
-      small: "text-sm leading-normal",
+      small: "text-small-min leading-normal md:text-sm",
       caption: "text-muted-foreground text-xs leading-normal",
+      overline:
+        "text-muted-foreground text-overline font-medium uppercase tracking-wider",
     },
   },
   defaultVariants: {
@@ -55,6 +59,7 @@ const defaultElement: Record<TypographyVariant, React.ElementType> = {
   body: "p",
   small: "p",
   caption: "p",
+  overline: "p",
 };
 
 interface TypographyProps

@@ -3,52 +3,156 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* ===========================
+   Norion-Soft palette
+   Source: Figma file SsNvmjU8USirCXnE6fpZAU
+   Раскрашена в брендовые токены ниже (--primary, --accent, etc.)
+   =========================== */
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  /* Violet — primary brand */
+  --violet-0: #ffffff;
+  --violet-10: #eeeffe;
+  --violet-20: #c7c9fb;
+  --violet-30: #a5a8f8;
+  --violet-40: #8487f5;
+  --violet-50: #6366f1;
+  --violet-60: #4f52d8;
+  --violet-70: #3d40be;
+  --violet-80: #2d2fa0;
+  --violet-90: #13155f;
+  --violet-100: #0a0b3d;
+
+  /* Teal — accent (secondary brand) */
+  --teal-0: #ffffff;
+  --teal-10: #e0fbf5;
+  --teal-20: #b3f4e4;
+  --teal-30: #7aead0;
+  --teal-40: #3dddb8;
+  --teal-60: #00a87e;
+  --teal-70: #007d5e;
+  --teal-80: #006050;
+  --teal-90: #004f42;
+  --teal-100: #002e27;
+
+  /* Grey — neutral */
+  --grey-0: #ffffff;
+  --grey-10: #f4f4f4;
+  --grey-20: #e0e0e0;
+  --grey-30: #c6c6c6;
+  --grey-40: #a8a8a8;
+  --grey-50: #8d8d8d;
+  --grey-60: #6f6f6f;
+  --grey-70: #525252;
+  --grey-80: #393939;
+  --grey-90: #262626;
+  --grey-100: #161616;
+
+  /* Red — destructive */
+  --red-10: #fff1f1;
+  --red-20: #ffd7d9;
+  --red-40: #ff8389;
+  --red-50: #fa4d56;
+  --red-60: #da1e28;
+  --red-70: #a2191f;
+  --red-80: #750e13;
+  --red-90: #51090c;
+  --red-100: #3c0407;
+
+  /* ===========================
+     Semantic roles (light theme)
+     =========================== */
+  --background: var(--grey-0);
+  --foreground: var(--grey-100);
+  --card: var(--grey-0);
+  --card-foreground: var(--grey-100);
+  --popover: var(--grey-0);
+  --popover-foreground: var(--grey-100);
+  --primary: var(--violet-50);
+  --primary-foreground: var(--grey-0);
+  --secondary: var(--grey-10);
+  --secondary-foreground: var(--grey-100);
+  --muted: var(--grey-10);
+  --muted-foreground: var(--grey-60);
+  --accent: var(--teal-60);
+  --accent-foreground: var(--grey-0);
+  --destructive: var(--red-60);
+  --destructive-foreground: var(--grey-0);
+  --border: var(--grey-20);
+  --input: var(--grey-20);
+  --ring: var(--violet-50);
   --radius: 0.625rem;
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
+  --background: var(--grey-100);
+  --foreground: var(--grey-0);
+  --card: var(--grey-90);
+  --card-foreground: var(--grey-0);
+  --popover: var(--grey-90);
+  --popover-foreground: var(--grey-0);
+  --primary: var(--violet-40);
+  --primary-foreground: var(--grey-100);
+  --secondary: var(--grey-80);
+  --secondary-foreground: var(--grey-0);
+  --muted: var(--grey-80);
+  --muted-foreground: var(--grey-40);
+  --accent: var(--teal-40);
+  --accent-foreground: var(--grey-100);
+  --destructive: var(--red-50);
+  --destructive-foreground: var(--grey-0);
+  --border: var(--grey-80);
+  --input: var(--grey-80);
+  --ring: var(--violet-40);
 }
 
 @theme inline {
+  /* Palette — accessible as bg-violet-50, text-teal-60, etc. */
+  --color-violet-0: var(--violet-0);
+  --color-violet-10: var(--violet-10);
+  --color-violet-20: var(--violet-20);
+  --color-violet-30: var(--violet-30);
+  --color-violet-40: var(--violet-40);
+  --color-violet-50: var(--violet-50);
+  --color-violet-60: var(--violet-60);
+  --color-violet-70: var(--violet-70);
+  --color-violet-80: var(--violet-80);
+  --color-violet-90: var(--violet-90);
+  --color-violet-100: var(--violet-100);
+
+  --color-teal-0: var(--teal-0);
+  --color-teal-10: var(--teal-10);
+  --color-teal-20: var(--teal-20);
+  --color-teal-30: var(--teal-30);
+  --color-teal-40: var(--teal-40);
+  --color-teal-60: var(--teal-60);
+  --color-teal-70: var(--teal-70);
+  --color-teal-80: var(--teal-80);
+  --color-teal-90: var(--teal-90);
+  --color-teal-100: var(--teal-100);
+
+  --color-grey-0: var(--grey-0);
+  --color-grey-10: var(--grey-10);
+  --color-grey-20: var(--grey-20);
+  --color-grey-30: var(--grey-30);
+  --color-grey-40: var(--grey-40);
+  --color-grey-50: var(--grey-50);
+  --color-grey-60: var(--grey-60);
+  --color-grey-70: var(--grey-70);
+  --color-grey-80: var(--grey-80);
+  --color-grey-90: var(--grey-90);
+  --color-grey-100: var(--grey-100);
+
+  --color-red-10: var(--red-10);
+  --color-red-20: var(--red-20);
+  --color-red-40: var(--red-40);
+  --color-red-50: var(--red-50);
+  --color-red-60: var(--red-60);
+  --color-red-70: var(--red-70);
+  --color-red-80: var(--red-80);
+  --color-red-90: var(--red-90);
+  --color-red-100: var(--red-100);
+
+  /* Semantic roles — used by shadcn components and most code */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -68,10 +172,21 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+
+  /* Radii — Norion-Soft scale */
+  --radius-sm: 0.25rem; /* 4px  — radius-sm */
+  --radius-md: 0.5rem; /* 8px  — radius-md */
+  --radius-lg: 0.75rem; /* 12px — radius-lg */
+  --radius-xl: 1rem; /* 16px — radius-xl */
+  --radius-2xl: 1.5rem; /* 24px — radius-2xl */
+  --radius-pill: 100px; /* radius-pill (for buttons/badges) */
+
+  /* Typography — custom sizes (Norion tokens that don't match Tailwind defaults) */
+  --text-h2-max: 2rem; /* 32px — size-h2-max */
+  --text-h3-max: 1.375rem; /* 22px — size-h3-max */
+  --text-small-min: 0.8125rem; /* 13px — size-small-min */
+  --text-overline: 0.6875rem; /* 11px — size-overline */
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
