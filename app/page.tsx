@@ -1,9 +1,15 @@
-import { Typography } from "@/components/common/typography";
+import { HeroSection } from "@/features/hero/components/hero-section";
+import { ExtrasafeSection } from "@/features/extrasafe/components/extrasafe-section";
+import { ProductsSection } from "@/features/products/components/products-section";
+import { AboutSection } from "@/features/about/components/about-section";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center p-8">
-      <Typography variant="display">Title</Typography>
+    <main>
+      <HeroSection />
+      <ExtrasafeSection />
+      <ProductsSection />
+      <AboutSection />
     </main>
   );
 }
