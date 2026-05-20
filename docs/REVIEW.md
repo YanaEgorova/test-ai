@@ -6,7 +6,7 @@
 
 Если pre-commit прошёл и CI зелёный — ниже соблюдено:
 
-- TypeScript компилируется
+- TypeScript компилируется.
 - ESLint без предупреждений
 - Prettier применён
 - `next build` проходит
