@@ -1,6 +1,7 @@
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 
+import { Logo } from "@/components/common/logo";
 import { Typography } from "@/components/common/typography";
 
 const products = [
@@ -23,11 +24,8 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="flex flex-col gap-4">
-            <Link href="/" className="flex items-center gap-2">
-              <span className="bg-primary text-primary-foreground flex size-8 items-center justify-center rounded-lg text-sm font-bold">
-                N
-              </span>
-              <span className="text-foreground font-semibold">Norionsoft</span>
+            <Link href="/">
+              <Logo height={28} />
             </Link>
             <Typography variant="small" className="text-muted-foreground">
               Norionsoft OÜ develops secure communication software, privacy

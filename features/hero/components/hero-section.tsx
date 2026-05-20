@@ -8,11 +8,10 @@ import { Typography } from "@/components/common/typography";
 export function HeroSection() {
   return (
     <section className="bg-background relative flex min-h-screen flex-col items-center justify-center overflow-hidden">
-      {/* Purple glow blob */}
-      <div className="bg-violet-10 pointer-events-none absolute -top-20 -left-40 h-[500px] w-[500px] rounded-full opacity-70 blur-3xl" />
-
-      {/* Vertical dashed line */}
-      <div className="border-violet-20 pointer-events-none absolute inset-y-0 left-1/2 -translate-x-px border-l border-dashed" />
+      {/* Centered purple glow */}
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+        <div className="h-[600px] w-[600px] rounded-full bg-violet-50 opacity-10 blur-3xl" />
+      </div>
 
       <Container
         size="default"
@@ -31,16 +30,13 @@ export function HeroSection() {
           <Typography variant="display" className="text-foreground">
             Building the Future of
           </Typography>
-          <Typography
-            variant="display"
-            className="from-violet-70 to-violet-30 decoration-violet-40 bg-gradient-to-r via-violet-50 bg-clip-text text-transparent underline decoration-2 underline-offset-4"
-          >
+          <Typography variant="display" className="text-violet-50">
             Secure Digital Products
           </Typography>
         </div>
 
         {/* Description */}
-        <Typography variant="lead" className="max-w-md">
+        <Typography variant="lead" className="text-muted-foreground max-w-md">
           We develop secure communication software, privacy technologies, and
           non-custodial blockchain software tools.
         </Typography>

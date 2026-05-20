@@ -4,6 +4,7 @@ import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 import { Navbar } from "@/components/common/navbar";
 import { Footer } from "@/components/common/footer";
+import { ThemeProvider } from "@/components/common/theme-provider";
 
 export const metadata: Metadata = {
   title: "Norionsoft OÜ — Secure Software Development",
@@ -22,9 +23,11 @@ export default function RootLayout({
       className={`${GeistSans.variable} ${GeistMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
-        <Navbar />
-        {children}
-        <Footer />
+        <ThemeProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
